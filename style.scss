@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
+
+$hide: none;
+
+/*@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+@mixin container {
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 70%;
+    height: auto; //450px;
+    background-color: green;
+    box-shadow: 2px 2px 10px 2px white;
+}
+
+@mixin button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: green;
+    color: white;
+    border: 2px solid rgba(31, 31, 31, 0.322);
+    border-radius: 50em;
+    padding: .5em 2em;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
+}
+
+@mixin title {
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    @include title;
+    font-size: 2.2em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-shadow: 3px 4px 0 black;
+}
+
+#start {
+
+    img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+} 
+
+.start-container {
+    @include container;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: .5s;
+
+    h2 {
+        @include title;
+    }
+    
+}
+
+.fas {
+    color: white;
+    font-size: 1.5em;
+    margin: .5vh;
+}
+
+h4 {
+    @include title;
+    font-size: 1.2em;
+}
+
+.myForm {
+    margin: 1em auto 0;
+    font-size: 1.2em;
+    color: white;
+
+    input[type='text'] {
+        padding: .4em;
+        border-radius: .3em;
+        width: 170px;
+
+        &:focus {
+            background-color: white;
+            color: green;
+        }
+    }
+}
+
+#start-btn {
+    @include button;
+    width: 40%;
+    //height: 10%;
+    margin: 1.5em 0;
+
+    &:hover {
+        background-color: rgb(4, 48, 4);
+        color: white;
+        border: 2px solid white;
+        letter-spacing: .2em;
+    }
+
+    &:active {
+        box-shadow: inset 40px 40px 40px green;
+        filter: blur(10px);
+    }
+}
+
+//  media queries// 
+
+@media (min-width: 576px) {
+    #start {
+        .start-container {
+            width: 45%;
+
+            #start-btn {
+                width: 45%;
+            }
+        }
+    }
+}
+    
+@media (min-width: 768px) {
+    #start {
+        .start-container {
+            width: 40%;
+
+            h2 {
+                font-size: 3.4em;
+            }
+
+            input[type='text'] {
+                width: 200px;
+            }
+
+            #start-btn {
+                font-size: 1.5em;
+                margin: .5em 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #start {
+        .start-container {
+            width: 35%;
+
+            .myForm {
+                margin: 2em auto 0;
+            }
+        }
+    }
+} 
+
+@media (min-width: 1200px) {
+    #start {
+        .start-container {
+            width: 25%;
+
+            #start-btn {
+                margin-top: 1em;
+            }
+        }
+    }
+}
