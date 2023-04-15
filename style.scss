@@ -79,7 +79,8 @@ header {
     }
 } 
 
-.start-container {
+.start-container,
+.score-container {
     @include container;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
@@ -138,7 +139,8 @@ h4 {
     }
 }
 
-#quiz {
+#quiz,
+#score {
     display: $hide;
 }
 
@@ -231,6 +233,60 @@ h4 {
         }
     }
 }
+
+#score {
+    .score-container {
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            letter-spacing: .2em;
+            margin-top: 1em;
+        }
+
+        hr {
+            border: 1px solid white;
+            width: 30%;
+            margin: .5em 0;
+        }
+
+        #user {
+            @include title;
+            font-size: 1em;
+        }
+
+        #result,
+        #percentage {
+            @include title;
+        }
+
+        #home-btn {
+            @include button;
+            width: 60%;
+            margin: .5em 0;
+            background: transparent;
+            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
+            &:hover,
+            &:focus {
+                box-shadow: 0 0 40px 40px rgb(4, 48, 4) inset;
+                color: white;
+            }
+
+            .fa {
+                padding-right: 5px;
+            }
+        }
+
+        .copyright {
+            color: white;
+            text-align: center;
+            font-size: .7em;
+            margin-bottom: 10px;
+        }
+    }
+}
+
 
 //  media queries// 
 
