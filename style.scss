@@ -138,6 +138,100 @@ h4 {
     }
 }
 
+#quiz {
+    display: $hide;
+}
+
+#quiz {
+    img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: fill;
+    } 
+
+    .quiz-container {
+        @include container;
+        width: 90%;
+        margin: 0;
+        padding: 5px 20px;
+        animation: leftIn .7s ease forwards;
+        transition-delay: .5s;
+
+        .question-number {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+
+            .time {
+                font-size: 1.4em;
+                font-weight: 700;
+                color: darkblue;
+            }
+        }
+
+        .top {
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 1em;
+            height: 80px;
+            color: white;
+            text-shadow: 2px 8px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+            gap: .5em;
+            font-size: 1.2em;
+            margin: 2em auto 1em;
+        }
+
+        .answer-btn {
+            font-size: .8em;
+            border: 2px solid white;
+            background-color: white;
+            width: 70vw;
+            margin: 0 auto;
+            padding: .5em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .5s;
+
+            h4 {
+                display: inline-block;
+                color: blue;
+            }
+
+            &:hover {
+                //background-color: lighten($color: dodgerblue, $amount: 2);
+                border-color: dodgerblue;
+                cursor: pointer;
+            }
+        }
+
+        .next {
+            display: flex;
+            justify-content: flex-end;
+
+            .next-btn {
+                @include button;
+                width: 20%;
+                padding: .2em;
+                margin: .2em 0;
+                border-radius: 10px;
+                background: steelblue;
+
+                &:hover {
+                    background-color: mediumblue;
+                    color: white;
+                    border-color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
 //  media queries// 
 
 @media (min-width: 576px) {
