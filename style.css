@@ -341,6 +341,17 @@ h4 {
   #start .start-container #start-btn {
     width: 45%;
   }
+  #quiz .quiz-container {
+    width: 80%;
+  }
+  #quiz .quiz-container .grid {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    gap: 2em 1em;
+  }
+  #quiz .quiz-container .answer-btn {
+    width: 30vw;
+  }
 }
 
 @media (min-width: 768px) {
@@ -365,6 +376,19 @@ h4 {
   }
   #start .start-container .myForm {
     margin: 2em auto 0;
+  }
+  #quiz .quiz-container {
+    width: 60%;
+  }
+  #quiz .quiz-container .top {
+    font-size: 1.8em;
+    padding: 0px 40px;
+  }
+  #quiz .quiz-container .grid {
+    margin: 2em auto 1em;
+  }
+  #quiz .quiz-container .answer-btn {
+    width: 20vw;
   }
 }
 
