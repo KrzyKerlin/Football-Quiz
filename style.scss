@@ -3,11 +3,11 @@
 
 $hide: none;
 
-/*@mixin flex-center {
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-}*/
+}
 
 @mixin container {
     flex-direction: column;
@@ -81,6 +81,7 @@ header {
 
 .start-container,
 .score-container {
+    @include flex-center;
     @include container;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
@@ -237,7 +238,7 @@ h4 {
 #score {
     .score-container {
 
-        h3 {
+        h4 {
             text-transform: uppercase;
             font-size: 1.2em;
             letter-spacing: .2em;
@@ -250,32 +251,9 @@ h4 {
             margin: .5em 0;
         }
 
-        #user {
-            @include title;
-            font-size: 1em;
-        }
-
         #result,
         #percentage {
             @include title;
-        }
-
-        #home-btn {
-            @include button;
-            width: 60%;
-            margin: .5em 0;
-            background: transparent;
-            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-
-            &:hover,
-            &:focus {
-                box-shadow: 0 0 40px 40px rgb(4, 48, 4) inset;
-                color: white;
-            }
-
-            .fa {
-                padding-right: 5px;
-            }
         }
 
         .copyright {
@@ -287,6 +265,15 @@ h4 {
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 //  media queries// 
 
