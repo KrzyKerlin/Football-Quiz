@@ -8,6 +8,7 @@ const answerATag = document.getElementById('answerA')
 const answerBTag = document.getElementById('answerB')
 const answerCTag = document.getElementById('answerC')
 const answerDTag = document.getElementById('answerD')
+const nextQuestion = document.getElementById('nextQuestions')
 const scorePage = document.getElementById('score')
 
 let questionsIndex = 0; //index questions 
@@ -134,3 +135,27 @@ function runQuestion() {
     answerCTag.innerHTML = "<h4>C.</h4>" + " " + quest.answers[2];
     answerDTag.innerHTML = "<h4>D.</h4>" + " " + quest.answers[3];
 }
+
+const lastQuestion = questions.length - 1;
+
+// next question
+nextQuestion.addEventListener('click', setNext)
+
+function setNext() {
+    indexNumber++; // question number
+
+    if (questionsIndex < lastQuestion) {
+        questionsIndex++;
+        runQuestion();
+    } else {
+        answersContainer.innerHTML = '';
+        nextQuestion.innerHTML = 'Finish';
+        final();
+
+        function final() {
+            quizPage.style.display = "none";
+            scorePage.style.display = "flex";
+        }
+    }
+}
+

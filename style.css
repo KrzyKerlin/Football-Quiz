@@ -24,7 +24,8 @@ header {
   text-shadow: 3px 4px 0 black;
 }
 
-#start img {
+#start img,
+#score img {
   width: 100vw;
   height: 100vh;
   -o-object-fit: cover;
@@ -389,6 +390,9 @@ h4 {
   }
   #quiz .quiz-container .answer-btn {
     width: 20vw;
+  }
+  #score .score-container {
+    width: 30%;
   }
 }
 

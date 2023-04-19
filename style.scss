@@ -70,7 +70,8 @@ header {
     text-shadow: 3px 4px 0 black;
 }
 
-#start {
+#start,
+#score {
 
     img {
         width: 100vw;
@@ -350,6 +351,11 @@ h4 {
             .answer-btn {
                 width: 20vw;
             }
+        }
+    }
+    #score {
+        .score-container {
+            width: 30%;
         }
     }
 } 
