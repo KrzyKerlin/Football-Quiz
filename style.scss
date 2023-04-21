@@ -229,6 +229,14 @@ h4 {
             transition-delay: 1s;
         }
 
+        .answered {
+            pointer-events: none;
+
+            &:hover {
+                cursor: no-drop;
+            }
+        }
+
         .next {
             display: flex;
             justify-content: flex-end;

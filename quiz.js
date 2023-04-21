@@ -183,6 +183,7 @@ answersTag.forEach(function (answer) {
             }
         }
 
+        disabled(); // another answers are unclickable
     })
 })
 
@@ -191,5 +192,12 @@ function resetClass() {
         answersContainer.children[i].classList.remove('correct');
         answersContainer.children[i].classList.remove('wrong');
         answersContainer.children[i].classList.remove('transition-time');
+        answersContainer.children[i].classList.remove('answered');
+    }
+}
+
+function disabled() {
+    for (let i = 0; i < answersLen; i++) {
+        answersContainer.children[i].classList.add('answered');
     }
 }

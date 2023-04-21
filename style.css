@@ -259,6 +259,14 @@ h4 {
           transition-delay: 1s;
 }
 
+#quiz .quiz-container .answered {
+  pointer-events: none;
+}
+
+#quiz .quiz-container .answered:hover {
+  cursor: no-drop;
+}
+
 #quiz .quiz-container .next {
   display: -webkit-box;
   display: -ms-flexbox;
