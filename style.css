@@ -242,6 +242,23 @@ h4 {
   cursor: pointer;
 }
 
+#quiz .quiz-container .correct {
+  background-color: limegreen;
+  border-color: limegreen;
+  color: white;
+  font-weight: 700;
+}
+
+#quiz .quiz-container .wrong {
+  background-color: red;
+  border-color: red;
+}
+
+#quiz .quiz-container .transition-time {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
 #quiz .quiz-container .next {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -213,6 +213,22 @@ h4 {
             }
         }
 
+        .correct {
+            background-color: limegreen;
+            border-color: limegreen;
+            color: white;
+            font-weight: 700;
+        }
+
+        .wrong {
+            background-color: red;
+            border-color: red;
+        }
+
+        .transition-time {
+            transition-delay: 1s;
+        }
+
         .next {
             display: flex;
             justify-content: flex-end;
