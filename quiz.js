@@ -143,6 +143,7 @@ nextQuestion.addEventListener('click', setNext)
 
 function setNext() {
     indexNumber++; // question number
+    resetClass(); // reset classes for answers
 
     if (questionsIndex < lastQuestion) {
         questionsIndex++;
@@ -168,10 +169,8 @@ answersTag.forEach(function (answer) {
 
         if (answer === questions[questionsIndex].correct) {
             answer.classList.add('correct');
-            answer.innerHTML = "dobrze";
         } else {
             answer.classList.add('wrong');
-            answer.innerHTML = "źle";
             showCorrectAnswer();
         }
 
@@ -187,3 +186,10 @@ answersTag.forEach(function (answer) {
     })
 })
 
+function resetClass() {
+    for (let i = 0; i < answersLen; i++) {
+        answersContainer.children[i].classList.remove('correct');
+        answersContainer.children[i].classList.remove('wrong');
+        answersContainer.children[i].classList.remove('transition-time');
+    }
+}
