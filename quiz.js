@@ -20,7 +20,30 @@ startButton.addEventListener('click', startQuiz)
 function startQuiz() {
     startPage.style.display = "none"
     quizPage.style.display = "flex"
-    runQuestion()
+    runQuestion();
+    startTimer();
+}
+
+let counter = 20;
+let interval;
+
+function startTimer() {
+    interval = setInterval(() => {
+        counter--;
+        if (counter >= 0) {
+        timeLeft = document.getElementById('timer');
+        timeLeft.innerHTML = counter;
+        if (counter <= 5) {
+        timeLeft.style.fontSize = "1.7em";
+        timeLeft.style.color = "red";
+        } else {
+        timeLeft.style.fontSize = "1.2em";
+        }
+        } else {
+        clearInterval(interval);
+        disabled(); // score = 0
+        }
+    }, 1000);
 }
 
 //questions and answers//
@@ -144,6 +167,9 @@ nextQuestion.addEventListener('click', setNext)
 function setNext() {
     indexNumber++; // question number
     resetClass(); // reset classes for answers
+    counter = 20;
+    timeLeft.style.color = "darkblue";
+    startTimer(); // reset and start countdown again
 
     if (questionsIndex < lastQuestion) {
         questionsIndex++;
@@ -184,6 +210,7 @@ answersTag.forEach(function (answer) {
         }
 
         disabled(); // another answers are unclickable
+        counter = 0; // pause timer
     })
 })
 

@@ -195,7 +195,8 @@ h4 {
 }
 
 #quiz .quiz-container .question-number .time {
-  font-size: 1.4em;
+  height: 10px;
+  font-size: 1.2em;
   font-weight: 700;
   color: darkblue;
 }
