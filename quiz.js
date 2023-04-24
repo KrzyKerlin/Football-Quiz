@@ -13,6 +13,7 @@ const scorePage = document.getElementById('score')
 
 let questionsIndex = 0; //index questions 
 let indexNumber = 0; // question number
+let score = 0;
 
 //start quiz//
 startButton.addEventListener('click', startQuiz)
@@ -198,6 +199,8 @@ answersTag.forEach(function (answer) {
 
         if (answer === questions[questionsIndex].correct) {
             answer.classList.add('correct');
+            score++; // add point
+            console.log('You have 1 point');
         } else {
             answer.classList.add('wrong');
             showCorrectAnswer();
@@ -231,3 +234,5 @@ function disabled() {
         answersContainer.children[i].classList.add('answered');
     }
 }
+
+// add pont if answer is correct
