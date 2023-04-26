@@ -10,6 +10,8 @@ const answerCTag = document.getElementById('answerC')
 const answerDTag = document.getElementById('answerD')
 const nextQuestion = document.getElementById('nextQuestions')
 const scorePage = document.getElementById('score')
+const scoreResult = document.getElementById('result')
+const scorePercantage = document.getElementById('percentage')
 
 let questionsIndex = 0; //index questions 
 let indexNumber = 0; // question number
@@ -179,13 +181,13 @@ function setNext() {
         questionsIndex++;
         runQuestion();
     } else {
-        answersContainer.innerHTML = '';
-        nextQuestion.innerHTML = 'Finish';
         final();
 
         function final() {
             quizPage.style.display = "none";
             scorePage.style.display = "flex";
+            scoreResult.innerHTML = score + "/" + questions.length; // last question + score page
+            scorePercantage.innerHTML = Math.round(100 * score / questions.length) + "%";
         }
     }
 }
@@ -200,7 +202,6 @@ answersTag.forEach(function (answer) {
         if (answer === questions[questionsIndex].correct) {
             answer.classList.add('correct');
             score++; // add point
-            console.log('You have 1 point');
         } else {
             answer.classList.add('wrong');
             showCorrectAnswer();
@@ -234,5 +235,3 @@ function disabled() {
         answersContainer.children[i].classList.add('answered');
     }
 }
-
-// add pont if answer is correct
