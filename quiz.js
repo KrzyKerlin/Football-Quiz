@@ -10,6 +10,8 @@ const answerCTag = document.getElementById('answerC')
 const answerDTag = document.getElementById('answerD')
 const nextQuestion = document.getElementById('nextQuestions')
 const scorePage = document.getElementById('score')
+const user = document.getElementById('username')
+const scoreUser = document.getElementById('user')
 const scoreResult = document.getElementById('result')
 const scorePercantage = document.getElementById('percentage')
 
@@ -20,9 +22,9 @@ let score = 0;
 //start quiz//
 startButton.addEventListener('click', startQuiz)
 
-function startQuiz() {
-    startPage.style.display = "none"
-    quizPage.style.display = "flex"
+function startQuiz() { 
+    startPage.style.display = "none";
+    quizPage.style.display = "flex";
     runQuestion();
     startAndResetTimer();
 }
@@ -186,6 +188,7 @@ function setNext() {
         function final() {
             quizPage.style.display = "none";
             scorePage.style.display = "flex";
+            scoreUser.innerHTML = user.value;
             scoreResult.innerHTML = score + "/" + questions.length; // last question + score page
             scorePercantage.innerHTML = Math.round(100 * score / questions.length) + "%";
         }

@@ -122,7 +122,8 @@ header {
 
         &:focus {
             background-color: white;
-            color: green;
+            color: darkgreen;
+            font-weight:  700;
         }
     }
 }
@@ -269,6 +270,12 @@ header {
 #score {
     .score-container {
 
+        #user,
+        #result,
+        #percentage {
+            @include title;
+        }
+
         h4 {
             text-transform: uppercase;
             font-size: 1.2em;
@@ -281,11 +288,6 @@ header {
             border: 1px solid white;
             width: 30%;
             margin: .5em 0;
-        }
-
-        #result,
-        #percentage {
-            @include title;
         }
 
         .copyright {
@@ -408,6 +410,7 @@ header {
     }
 
     #score {
+        #user,
         h4 {
             font-size: 1.5em;
         }

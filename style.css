@@ -106,7 +106,8 @@ header {
 
 .myForm input[type='text']:focus {
   background-color: white;
-  color: green;
+  color: darkgreen;
+  font-weight: 700;
 }
 
 #start-btn {
@@ -323,6 +324,14 @@ header {
   cursor: pointer;
 }
 
+#score .score-container #user,
+#score .score-container #result,
+#score .score-container #percentage {
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+
 #score .score-container h4 {
   text-transform: uppercase;
   font-size: 1.2em;
@@ -335,13 +344,6 @@ header {
   border: 1px solid white;
   width: 30%;
   margin: .5em 0;
-}
-
-#score .score-container #result,
-#score .score-container #percentage {
-  font-size: 2em;
-  text-align: center;
-  color: white;
 }
 
 #score .score-container .copyright {
@@ -440,6 +442,7 @@ header {
   #quiz .quiz-container {
     width: 50%;
   }
+  #score #user,
   #score h4 {
     font-size: 1.5em;
   }
