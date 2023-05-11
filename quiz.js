@@ -1,5 +1,8 @@
 const startPage = document.getElementById('start')
-const startButton = document.getElementById('start-btn')
+const startButton = document.getElementById('start-categories')
+const categoriesPage = document.getElementById('categories')
+const categories = document.querySelectorAll(".category-btn");
+const startQuizButton = document.getElementById('start-quiz')
 const quizPage = document.getElementById('quiz')
 const questionTag = document.getElementById('question')
 const questionNumber = document.getElementById('currentQuestion')
@@ -19,11 +22,42 @@ let questionsIndex = 0; //index questions
 let indexNumber = 0; // question number
 let score = 0;
 
+// go to category selection
+startButton.addEventListener('click', selectCategories)
+function selectCategories() {
+    startPage.style.display = "none";
+    categoriesPage.style.display = "flex";
+}
+
+// set the state of the start quiz button if category was selected
+function setStartBtnState() {
+  let categorySelected = false;
+  categories.forEach((category) => {
+    if (category.classList.contains("selected")) {
+        categorySelected = true;
+        startQuizButton.style.backgroundColor = "#043004";
+        startQuizButton.style.letterSpacing = ".2em";
+    }
+  });
+  startQuizButton.disabled = !categorySelected;
+}
+
+categories.forEach((category) => {
+  category.addEventListener("click", () => {
+    categories.forEach((category) => {
+      category.classList.remove("catSelected");
+    });
+    category.classList.add("catSelected");
+    setStartBtnState();
+  });
+});
+setStartBtnState();
+
 //start quiz//
-startButton.addEventListener('click', startQuiz)
+startQuizButton.addEventListener('click', startQuiz)
 
 function startQuiz() { 
-    startPage.style.display = "none";
+    categoriesPage.style.display = "none";
     quizPage.style.display = "flex";
     runQuestion();
     startAndResetTimer();

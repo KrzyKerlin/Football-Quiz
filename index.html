@@ -25,12 +25,26 @@
                     <p class="rule">20 pytań</p>
                     <p class="rule">20 sekund na odpowiedź</p>
                     <p class="rule">* Stan na 2023 rok</p>
+                    <form class="myForm">
+                        <label for="username">Imię:</label>
+                        <input id="username" type="text" name="username" placeholder="name" maxlength="15" />
+                    </form>
                 </div>
-                <form class="myForm">
-                    <label for="username">Imię:</label>
-                    <input id="username" type="text" name="username" placeholder="name" maxlength="15" />
-                </form>
-                <button id="start-btn">Start</button>
+                <button id="start-categories"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section id="categories">
+            <img src="./img/startPhoto.jpg" alt="Credit: Photo by Guillaume de Germain on Unsplash">
+            <div class="categories-container">
+                <h2>Wybierz kategorię:</h2>
+                <div class="cat">
+                    <div id="worldCup" class="category-btn">Mistrzostwa Świata</div>
+                    <div id="clubCups" class="category-btn">Klubowe Puchary</div>
+                    <div id="leagues" class="category-btn">Ligi Światowe</div>
+                    <div id="records" class="category-btn">Rekordy</div>
+                </div>
+                <button id="start-quiz">Start</button>
             </div>
         </section>
 
