@@ -307,18 +307,20 @@ function setNext() {
     indexNumber++; // question number
     resetClass(); // reset classes for answers
     startAndResetTimer(); // reset and start countdown again
-
-    if (questionsIndex < lastQuestion) {
-        questionsIndex++;
-        runQuestion(questions);
+  
+    if (questionsIndex < questions.length - 1) {
+      questionsIndex++;
+      runQuestion(questions);
     } else {
-        final();
+      final();
+  
+
 
         function final() {
             quizPage.style.display = "none";
             scorePage.style.display = "flex";
             scoreUser.innerHTML = user.value;
-            scoreResult.innerHTML = score + "/" + questions.length; // last question + score page
+            scoreResult.innerHTML = score + "/" + questions.length; // ostatnie pytanie + strona wyników
             scorePercantage.innerHTML = Math.round(100 * score / questions.length) + "%";
         }
     }
