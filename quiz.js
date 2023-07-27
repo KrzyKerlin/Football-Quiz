@@ -115,12 +115,12 @@ const worldCupQuestions = [
   {
     question: "Kto został królem strzelców na mundialu we Francji w 1998 roku?",
     answers: ["Davor Šuker", "Dennis Bergkamp", "Ronaldo Nazario", "Thierry Henry"],
-    correct: "answerA",
+    correct: answerA,
   },
   {
     question: "Kto zagrał w finale mundialu w 2006 roku?",
     answers: ["Francja-Brazylia", "Włochy-Francja", "Brazylia-Niemcy", "Hiszpania-Holandia"],
-    correct: "answerB",
+    correct: answerB,
   },
   {
     question: "Kto jest 2-krotnym Mistrzem Świata?",
@@ -135,7 +135,7 @@ const worldCupQuestions = [
 {
     question: "Kto jest rekordzistą pod względem liczby zdobytych bramek na mundialu?",
     answers: ["Ronaldo Nazario", "Miroslav Klose", "Cristiano Ronaldo", "Pelé"],
-    correct: "answerB",
+    correct: answerB,
   },
   {
     question: "Kto strzelił decydującego karnego w finale mundialu 2022 roku?",
