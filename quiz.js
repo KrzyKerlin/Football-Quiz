@@ -112,36 +112,56 @@ const categoryTitle = document.querySelector('#category');
 
 // //questions and answers//
 const worldCupQuestions = [
-  {
-    question: "Kto został królem strzelców na mundialu we Francji w 1998 roku?",
-    answers: ["Davor Šuker", "Dennis Bergkamp", "Ronaldo Nazario", "Thierry Henry"],
-    correct: answerA,
-  },
-  {
-    question: "Kto zagrał w finale mundialu w 2006 roku?",
-    answers: ["Francja-Brazylia", "Włochy-Francja", "Brazylia-Niemcy", "Hiszpania-Holandia"],
-    correct: answerB,
-  },
-  {
-    question: "Kto jest 2-krotnym Mistrzem Świata?",
-    answers: ["Romario", "Cafu", "Rivaldo", "Roberto Carlos"],
-    correct: answerB,
-},
-{
-    question: "Która reprezentacja zagrała w meczu finałowym mundialu?",
-    answers: ["Portugalia", "Bułgaria", "Szwecja", "Jugosławia"],
-    correct: answerC,
-},
-{
-    question: "Kto jest rekordzistą pod względem liczby zdobytych bramek na mundialu?",
-    answers: ["Ronaldo Nazario", "Miroslav Klose", "Cristiano Ronaldo", "Pelé"],
-    correct: answerB,
-  },
-  {
-    question: "Kto strzelił decydującego karnego w finale mundialu 2022 roku?",
-    answers: ["Lionel Messi", "Nicolas Otamendi", "Gonzalo Montiel" , "Marcos Acuña"],
-    correct: answerC,
-  }
+    {
+        question: "Kto został królem strzelców na mundialu we Francji w 1998 roku?",
+        answers: ["Davor Šuker", "Dennis Bergkamp", "Ronaldo Nazario", "Thierry Henry"],
+        correct: answerA,
+    },
+    {
+        question: "Kto zagrał w finale mundialu w 2006 roku?",
+        answers: ["Francja-Brazylia", "Włochy-Francja", "Brazylia-Niemcy", "Hiszpania-Holandia"],
+        correct: answerB,
+    },
+    {
+        question: "Kto jest 2-krotnym Mistrzem Świata?",
+        answers: ["Romario", "Cafu", "Rivaldo", "Roberto Carlos"],
+        correct: answerB,
+    },
+    {
+        question: "Która reprezentacja zagrała w meczu finałowym mundialu?",
+        answers: ["Portugalia", "Bułgaria", "Szwecja", "Jugosławia"],
+        correct: answerC,
+    },
+    {
+        question: "Kto jest rekordzistą pod względem liczby zdobytych bramek na mundialu?",
+        answers: ["Ronaldo Nazario", "Miroslav Klose", "Cristiano Ronaldo", "Pelé"],
+        correct: answerB,
+    },
+    {
+        question: "Kto strzelił decydującego karnego w finale mundialu 2022 roku?",
+        answers: ["Lionel Messi", "Nicolas Otamendi", "Gonzalo Montiel" , "Marcos Acuña"],
+        correct: answerC,
+    },
+    {
+        question: "Kto strzelił najwięcej bramek na jednym mundialu?",
+        answers: ["Sandor Kocsis", "Gerd Mueller", "Just Fontaine" , "Ferenc Puskás"],
+        correct: answerC,
+    },
+    {
+        question: "Na których z wymienionych mistrzostw padło najwięcej bramek?",
+        answers: ["RPA 2010 rok", "Francja 1998 rok", "USA 1994 rok" , "Rosja 2018 rok"],
+        correct: answerA,
+    },
+    {
+        question: "W którym mieście został rozegrany finał w 1994 roku?",
+        answers: ["Rzym", "Ciudad de México", "Johannesburg" , "Pasadena"],
+        correct: answerD,
+    },
+    {
+        question: "Która reprezentacja wystąpiła na mundialu?",
+        answers: ["Belize", "Malta", "Dominika" , "Jamajka"],
+        correct: answerD,
+    } 
 ];
 
 const clubCupsQuestions = [
@@ -163,8 +183,38 @@ const clubCupsQuestions = [
     {
         question: "Który klub zdobył azjatycką Ligę Mistzrów w 2023 roku?",
         answers: ["Urawa Red Diamonds", "Al-Hilal", "Gamba Osaka", "FC Seoul"],
-        corerct: answerA,
-    }
+        correct: answerA,
+    },
+    {
+        question: "W którym roku Manchester City wygrał Ligę Mistrzów?",
+        answers: ["2020", "2021", "2022", "2023"],
+        correct: answerD,
+    },
+    {
+        question: "Liga Konferencji to klubowe rozgrywki?",
+        answers: ["W Azji", "W Afryce", "W Europie", "W Ameryce Północnej"],
+        correct: answerC,
+    },
+    {
+        question: "Klub, który może zagrać w CAF Champions League to?",
+        answers: ["Al-Sadd SC", "Boca Juniors", "Al Ahly", "Sydney FC "],
+        correct: answerC,
+    },
+    {
+        question: "Który piłkarz nie wygrał Ligi Mistrzów?",
+        answers: ["Frank Lampard", "Gianluigi Buffon", "Sergio Ramos", "Marcel Desailly"],
+        correct: answerB,
+    },
+    {
+        question: "Który klub wygrał najwięcej razy Copa Libertadores?",
+        answers: ["Santos", "Olimpia", "Colo-Colo", "Independiente"],
+        correct: answerD,
+    },
+    {
+        question: "Które rozgrywki zastąpiły Puchar UEFA?",
+        answers: ["Liga Europy", "Liga Narodów", "Puchar Zdobywców Pucharów", "Puchar Sołtysa"],
+        correct: answerA,
+    },
 ];
 
 const leaguesQuestions = [
