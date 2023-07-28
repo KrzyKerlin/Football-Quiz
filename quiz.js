@@ -219,7 +219,7 @@ const clubCupsQuestions = [
 
 const leaguesQuestions = [
     {
-        question:  "W których sezonach Napoli zdobylo Mistrzostwo Włoch?",
+        question:  "W których sezonach Napoli zdobyło Mistrzostwo Włoch?",
         answers: ["1986/87, 1989/90, 2022/23", "1988/89, 1989/90, 2022/23", "1980/81, 1986/87, 2022/23", "1982/83, 1986/87, 2022/23"],
         correct: answerA,
     },
@@ -249,19 +249,24 @@ const leaguesQuestions = [
         correct: answerB,
     },
     {
+        question: "Eredivisie to rozgrywki ligowe w ...",
+        answers: ["Belgii", "Norwegii", "Finlandii", "Holandii"],
+        correct: answerD,
+    },
+    {
         question: "Kogo Roman Abramowicz ściągnął do Chelsea najpóźniej?",
         answers: ["Joe Cole", "Juan Sebastian Veron", "Didier Drogba", "Claude Makalele"],
         correct: answerC,
     },
     {
-        question: "Eredivisie to rozgrywki ligowe w ...",
-        answers: ["Belgii", "Norwegii", "Finlandii", "Holandii"],
-        corerct: answerD,
-    },
-    {
         question: "Z którego kraju pochodzi klub Vissel Kobe?",
         answers: ["Korei Południowej", "Wietnamu", "Chin", "Japonii"],
         correct: answerD,
+    },
+    {
+        question: "Jakie jest inna nazwa Primera División?",
+        answers: ["La Liga", "Jupiler League", "Primeira Liga", "MLS"],
+        correct: answerA,
     },
 ];
 
@@ -282,9 +287,14 @@ const recordsQuestions = [
         correct: answerC,
     },
     {
-        question: "Kto nie był współgospodarzem EURO 2021?",
+        question: "Gdzie nie odbyły się mecze EURO 2021?",
         answers: ["Szkocja", "Belgia", "Rosja", "Dania"],
         correct: answerB,
+    },
+    {
+        question: "Ile lat w 2023 roku skończył grający zawodnik Kazuyoshi Miura?",
+        answers: ["50", "53", "56", "59"],
+        correct: answerC,
     },
     {
         question: "Kto ma najwięcej występów w koszulce Realu Madryt?",
@@ -292,14 +302,24 @@ const recordsQuestions = [
         correct: answerA,
     },
     {
-        question: "Które drużyny 3-krotnie zdobyły Mistrzostwo Europy?",
-        answers: ["Niemcy i Hiszpania", "Niemcy i Włochy", "Francja i Włochy", "Francja i Hiszpania"],
-        correct: answerA,
-    },
-    {
         question: "Po kim Ronaldinho przejął numer 10 w PSG?",
         answers: ["Mikeal Arteta", "Pedro Pauleta", "Nicolas Anelka", "Jay-Jay Okocha"],
         correct: answerD,
+    },
+    {
+        question: "Najwięcej zwycięstw w Pucharze Narodów Afryki ma?",
+        answers: ["Nigeria", "Tunezja", "Egipt", "Senegal"],
+        correct: answerC,
+    },
+    {
+        question: "Który piłkarz ma najwięcej rozegranych spotkań w Premier League?",
+        answers: ["Alan Shearer", "Gareth Barry", "Tony Adams", "Mark le Tissier"],
+        correct: answerB,
+    },
+    {
+        question: "Które drużyny 3-krotnie zdobyły Mistrzostwo Europy?",
+        answers: ["Niemcy i Hiszpania", "Niemcy i Włochy", "Francja i Włochy", "Francja i Hiszpania"],
+        correct: answerA,
     },
 ];
 
