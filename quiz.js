@@ -99,6 +99,7 @@ function startAndResetTimer() {
     } else {
       clearInterval(interval);
       disabled(); // score = 0
+      showCorrectAnswer();
     }
   }, 1000);  // 1000 ms = 1 sec
 }
@@ -219,7 +220,7 @@ const clubCupsQuestions = [
 
 const leaguesQuestions = [
     {
-        question:  "W których sezonach Napoli zdobyło Mistrzostwo Włoch?",
+        question: "W których sezonach Napoli zdobyło Mistrzostwo Włoch?",
         answers: ["1986/87, 1989/90, 2022/23", "1988/89, 1989/90, 2022/23", "1980/81, 1986/87, 2022/23", "1982/83, 1986/87, 2022/23"],
         correct: answerA,
     },
@@ -254,8 +255,8 @@ const leaguesQuestions = [
         correct: answerD,
     },
     {
-        question: "Kogo Roman Abramowicz ściągnął do Chelsea najpóźniej?",
-        answers: ["Joe Cole", "Juan Sebastian Veron", "Didier Drogba", "Claude Makalele"],
+        question: "Kto najczęściej uczestniczył w rozgrywkach o mistrzostwo Francji?",
+        answers: ["Lens", "Olympique Lyon", "Olympique Marsylia", "Monaco"],
         correct: answerC,
     },
     {
@@ -264,7 +265,7 @@ const leaguesQuestions = [
         correct: answerD,
     },
     {
-        question: "Jakie jest inna nazwa Primera División?",
+        question: "Jaka jest inna nazwa Primera División?",
         answers: ["La Liga", "Jupiler League", "Primeira Liga", "MLS"],
         correct: answerA,
     },
@@ -292,7 +293,7 @@ const recordsQuestions = [
         correct: answerB,
     },
     {
-        question: "Ile lat w 2023 roku skończył grający zawodnik Kazuyoshi Miura?",
+        question: "Ile lat skończył w 2023 roku zawodnik Kazuyoshi Miura?",
         answers: ["50", "53", "56", "59"],
         correct: answerC,
     },
@@ -325,10 +326,10 @@ const recordsQuestions = [
 
 let questions = [];
 
-// Obsługa kliknięć na przyciskach kategorii
+// Handling clicks on category buttons
 worldCupBtn.addEventListener("click", function() {
-    categoryTitle.textContent = "Mistrzostwa Świata"; // zmienia tytuł kategorii
-    runQuestion(worldCupQuestions); // wyświetla pytanie
+    categoryTitle.textContent = "Mistrzostwa Świata"; // changes the category title
+    runQuestion(worldCupQuestions); // displays a question
 });
     
 clubCupsBtn.addEventListener("click", function() {
@@ -346,7 +347,7 @@ recordsBtn.addEventListener("click", function() {
     runQuestion(recordsQuestions);
 });
     
-    // Funkcja wyświetlająca pytania
+// run questions and answers
 function runQuestion(questions) {
     let quest = questions[questionsIndex];
     questionNumber.textContent = indexNumber + 1 + " / " + questions.length;
@@ -356,17 +357,6 @@ function runQuestion(questions) {
     answerCTag.innerHTML = "<h4>C.</h4>" + " " + quest.answers[2];
     answerDTag.innerHTML = "<h4>D.</h4>" + " " + quest.answers[3];
 }
-         
-/*
-function runQuestion() {
-    let quest = questions[questionsIndex];
-    questionNumber.textContent = indexNumber + 1 + " / " + questions.length;
-    questionTag.textContent = quest.question;
-    answerATag.innerHTML = "<h4>A.</h4>" + " " + quest.answers[0];
-    answerBTag.innerHTML = "<h4>B.</h4>" + " " + quest.answers[1];
-    answerCTag.innerHTML = "<h4>C.</h4>" + " " + quest.answers[2];
-    answerDTag.innerHTML = "<h4>D.</h4>" + " " + quest.answers[3];
-}*/
 
 const lastQuestion = questions.length - 1;
 
@@ -384,8 +374,6 @@ function setNext() {
     } else {
       final();
   
-
-
         function final() {
             quizPage.style.display = "none";
             scorePage.style.display = "flex";
@@ -411,19 +399,19 @@ answersTag.forEach(function (answer) {
             showCorrectAnswer();
         }
 
-        function showCorrectAnswer() {
-            for (let i = 0; i < answersLen; i++) {
-                if (answersContainer.children[i] === questions[questionsIndex].correct) {
-                    answersContainer.children[i].classList.add('correct');
-                    answersContainer.children[i].classList.add('transition-time');
-                }
-            }
-        }
-
         disabled(); // another answers are unclickable
         counter = 0; // pause timer
     })
 })
+
+function showCorrectAnswer() {
+    for (let i = 0; i < answersLen; i++) {
+        if (answersContainer.children[i] === questions[questionsIndex].correct) {
+            answersContainer.children[i].classList.add('correct');
+            answersContainer.children[i].classList.add('transition-time');
+        }
+    }
+}
 
 function resetClass() {
     for (let i = 0; i < answersLen; i++) {
