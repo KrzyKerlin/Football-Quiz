@@ -8,6 +8,7 @@
 
 body {
   font-family: "Oswald", sans-serif;
+  overflow: hidden;
 }
 
 header {
@@ -22,6 +23,11 @@ header {
   text-shadow: 3px 4px 0 black;
 }
 
+#start,
+#categories,
+#score {
+  overflow: hidden;
+}
 #start img,
 #categories img,
 #score img {

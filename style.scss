@@ -59,6 +59,7 @@ $hide: none;
 
 body {
     font-family: 'Oswald', sans-serif;
+    overflow: hidden;
 }
 
 header {
@@ -74,7 +75,7 @@ header {
 #start,
 #categories,
 #score {
-
+    overflow: hidden;
     img {
         width: 100%;
         height: 100vh;
