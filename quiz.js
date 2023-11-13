@@ -53,12 +53,21 @@ categories.forEach((category) => {
 });
 setStartBtnState();
 
+// mix up the order of questions
+function shuffleQuestions(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 //start quiz//
 startQuizButton.addEventListener('click', startQuiz)
 
 function startQuiz() {
     categoriesPage.style.display = "none";
     quizPage.style.display = "flex";
+
     if (worldCupBtn.classList.contains("catSelected")) {
         questions = worldCupQuestions;
         categoryTitle.textContent = "Mistrzostwa Świata";
@@ -72,6 +81,8 @@ function startQuiz() {
         questions = recordsQuestions;
         categoryTitle.textContent = "Rekordy I Ciekawostki";
     }
+
+    shuffleQuestions(questions);
     runQuestion(questions);
     startAndResetTimer();
 }
